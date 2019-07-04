@@ -4,6 +4,9 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {ServerComponent} from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import {FormsModule} from '@angular/forms';
 
 // Angular uses components to build web pages and modules to basically bundle components into packages
 
@@ -16,10 +19,13 @@ import { ServersComponent } from './servers/servers.component';
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent // <- CLI already added this
+    ServersComponent,
+    SuccessAlertComponent, // <- CLI already added this
+    WarningAlertComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

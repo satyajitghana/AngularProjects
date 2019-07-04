@@ -1,3 +1,30 @@
+<label>ServerName</label>
+<!--  $event here passes the event to the function-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)">-->
+
+<!--This is Two way Data binding-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<!--<p>-->
+<!--  {{serverName}}-->
+<!--</p>-->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server
+</button>
+<!--Here we are using property binding-->
+<!--<p>{{allowNewServer}}</p>-->
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{serverCreationStatus}}</p>
 <!--Selectors are reusable ! -->
 <app-server></app-server>
 <app-server></app-server>
+
+<!--We are using all forms of binding here, string interpolation to get the serverStatus, property binding to enable
+the button, event binding to listen to add server click, and two way binding to get the server name from the user-->
