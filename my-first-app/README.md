@@ -59,3 +59,28 @@ The MDN (Mozilla Developer Network) offers nice lists of all properties and even
 
 4. Two Way Data Binding
 ``[(ngModel)]="data"``
+
+# Directives
+
+Directives are instructions in the DOM!  
+Components are kind of such instructions  
+Directives can be without templates  
+
+``<p appTurnGreen> Receives a green background! </p>``  
+this is a custom directive, attribute selector are used, but you can use css class or element style like selector
+
+Directives are declared as:
+
+```angular2
+@Directive({
+  selector: '[appTurnGreen'
+})
+export class TurnGreenDirective {
+  ...
+}
+```
+
+Property binding is not the same as directive !
+
+we are binding to a property of directive
+

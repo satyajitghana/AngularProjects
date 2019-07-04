@@ -1,0 +1,13 @@
+<label> Enter your Username:
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="username">
+</label>
+<button
+  class="btn btn-primary"
+  [disabled]="username === ''"
+  (click)="username = ''">
+  Reset User
+</button>
+<p>Entered Username : {{username}}</p>

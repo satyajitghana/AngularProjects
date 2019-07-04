@@ -7,6 +7,8 @@ import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { SecretPasswordComponent } from './secret-password/secret-password.component';
 
 // Angular uses components to build web pages and modules to basically bundle components into packages
 
@@ -21,7 +23,7 @@ import {FormsModule} from '@angular/forms';
     ServerComponent,
     ServersComponent,
     SuccessAlertComponent, // <- CLI already added this
-    WarningAlertComponent,
+    WarningAlertComponent, LoginComponent, SecretPasswordComponent,
   ],
   imports: [
     BrowserModule,

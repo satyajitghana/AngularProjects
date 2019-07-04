@@ -1,4 +1,10 @@
 <!--Any Expression that can be resolved to a string at the end works with string interpolation-->
 <!--You could also call a method-->
 <!--You cant write multiline expressions here-->
-<p> {{'Server'}} with ID {{serverId}} and it is {{getServerStatus()}} </p>
+
+<!--ngClass will add a class to the element if the given condition is true-->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{online: serverStatus ==='online'}">
+  {{'Server'}} with ID {{serverId}} and it is {{getServerStatus()}}
+</p>
