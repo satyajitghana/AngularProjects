@@ -1,27 +1,37 @@
-# MyFirstApp
+# My First App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Create a new project by using ``ng new my-first-app``  
+Now to add BootStrap to this type ``npm install --save bootstrap`` and then add it to Styles in ``angular.json``  
+```json5
 
-## Development server
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Lesson:
 
-## Code scaffolding
+How does the app work ?  
+Angular is a SPA - Single Page Application, so the only page that is, is the index.html. now you'll see the ``<app-root>`` tag, now how does angular know that this means our root app ?   
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Here is the main.ts file, this bootstraps the AppModule, which contains the AppComponent
+```angular2
+platformBrowserDynamic().bootstrapModule(AppModule)
+    .catch(err => console.error(err));
+```
 
-## Build
+The Selector is present in AppComponent  
+```angular2
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This is how the ``<app-root>`` works, there are selectors for various Components that can be used in html, and the AppModule is made aware of these components's selectors, each of these component has a html and a css associated with them.
 
-## Running unit tests
+Use ``emmet`` plugin in editor
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can create a new component using ``ng generate component servers`` this will create a folder server and inside will have the css, html and the ts file.
