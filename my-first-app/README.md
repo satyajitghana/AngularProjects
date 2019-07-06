@@ -84,3 +84,17 @@ Property binding is not the same as directive !
 
 we are binding to a property of directive
 
+# Debugging
+
+You can set breakpoints to the line in main.bundle.js and then it will take you to the typescript file associated with that line, source map is something that is used here to map the javascript code in the bunlde file with the source file, ofcourse this is stripped during production.
+
+To locate the source files, go to Sources in Debugging tools  
+and then ``./src/app`` you'll find your files  
+
+You can also install the extension https://augury.rangle.io/
+
+# Binding Explained
+
+Property binding, remember we used ``[src]`` in the image element, this was property binding, the property src expects data from somewhere  
+Event binding, remember ``(click)`` in the button element, this is event binding, the click event emits data to somewhere  
+now ``[(NgModel)]`` is a two way binding, it sends and receives data that's why it is ``[()]``  
