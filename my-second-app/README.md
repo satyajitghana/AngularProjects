@@ -12,3 +12,13 @@ use ``<ng-content>`` to project the views
 ``ngAfterViewInit`` : Called after the component's view (and child views) has been initialized  
 ``ngAfterViewChecked`` : Called every time the view (and child views) have been checked  
 ``ngOnDestroy`` : Called once the component is about to be destroyed  
+
+# Attribute vs Structural
+
+## Attribute Directives
+- Looks like a normal HTML attribute (possibly with databinding or event binding)  
+- Only affect/change the element they are added to
+
+## Structural Directive
+- Looks like a normal HTML attribute but have a leading * (for desugaring)  
+- Affect a whole area in the DOM (elements get added/removed)  
