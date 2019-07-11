@@ -11,6 +11,8 @@ export class OddNumbersComponent implements OnInit {
   oddNumbers = [1, 3, 5];
   evenNumbers = [2, 4];
 
+  value = 10;
+
   constructor() {
   }
 

@@ -21,4 +21,14 @@ use ``<ng-content>`` to project the views
 
 ## Structural Directive
 - Looks like a normal HTML attribute but have a leading * (for desugaring)  
-- Affect a whole area in the DOM (elements get added/removed)  
+- Affect a whole area in the DOM (elements get added/removed)   
+
+# View Encapsulation 
+  encapsulation: ViewEncapsulation.None // Emulated, ShadowDOM
+
+## Why should you use the Render2 ?
+
+sometimes you might not have the access to modifying the element directly, such as service workers, there you would use the Renderer
+
+
+
